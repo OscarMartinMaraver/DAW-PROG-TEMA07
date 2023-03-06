@@ -6,9 +6,7 @@ import java.util.HashSet;
  * Ejercicio 1. Gestionando mascotas
  * @author Oscar Martín Maraver
  */
-public class Ejercicio01 {
-    
-    public static void main(String[] args) {
+public static void main(String[] args) {
 
         //----------------------------------------------
         //    Declaración de variables y constantes
@@ -34,7 +32,6 @@ public class Ejercicio01 {
         
         HashSet<Mascota> conjuntoUno=new HashSet<>();
         HashSet<Mascota> conjuntoDos=new HashSet<>();
-        
 
         int contadorMascota=0;
         
@@ -53,12 +50,21 @@ public class Ejercicio01 {
 
         // Cálculo de la Unión de los dos conjuntos 
         
+        HashSet<Mascota> union=new HashSet<>();
+        union.addAll(conjuntoUno);
+        union.addAll(conjuntoDos);
         
         // Cálculo de la Intersección de los conjuntos
         
+        HashSet<Mascota> interseccion=new HashSet<>();
+        interseccion.addAll(union);
+        interseccion.retainAll(conjuntoUno);
         
         // Cálculo de la Diferencia de los conjuntos
         
+        HashSet<Mascota> diferencia=new HashSet<>();
+        diferencia.addAll(union);
+        diferencia.removeAll(conjuntoUno);
         
         //----------------------------------------------
         //              Salida de Resultados 
@@ -79,6 +85,17 @@ public class Ejercicio01 {
         
         System.out.print(conjuntoDos.toString());
 
+        System.out.println();
+        System.out.println("Union Mascotas1 y Mascotas2:");
+        System.out.print(union.toString());
+        
+        System.out.println();
+        System.out.println("Intersección Unión y Mascotas1:");
+        System.out.print(interseccion.toString());
+        
+        System.out.println();
+        System.out.println("Diferencia Unión-Mascotas1:");
+        System.out.print(diferencia.toString());
     }
    
 }
