@@ -27,15 +27,13 @@ public class Ejercicio02 {
 
         // Rellenamos la lista con mascotas aleatorias hasta que haya NUMERO_MASCOTAS
         ArrayList<Mascota> arrayMascota = new ArrayList<>();
-
         int contadorMascota = 0;
-
+        Mascota m;
+        
         do {
-            Mascota m;
             m = Utilidades.mascotaAleatoria();
             arrayMascota.add(m);
             contadorMascota++;
-
         } while (contadorMascota < NUMERO_MASCOTAS);
 
         //----------------------------------------------
