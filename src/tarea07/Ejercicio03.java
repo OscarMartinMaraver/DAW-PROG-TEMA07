@@ -2,7 +2,7 @@ package tarea07;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * Ejercicio 3. La mascota del mes
@@ -32,7 +32,7 @@ public class Ejercicio03 {
         LocalDate fecha = LocalDate.parse("2023-01-01");
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        HashMap<LocalDate, Mascota> mascotaMes = new HashMap<>();
+        LinkedHashMap<LocalDate, Mascota> mascotaMes = new LinkedHashMap<>();
         Mascota m;
         int contadorMes = 0;
         do {

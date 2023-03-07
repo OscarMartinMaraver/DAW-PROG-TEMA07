@@ -1,7 +1,7 @@
 package tarea07;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -44,7 +44,7 @@ public class Ejercicio04 {
         //----------------------------------------------
         //                 Procesamiento
         //----------------------------------------------
-        HashMap<String, List<Integer>> clasifMascota = new HashMap<>();
+        LinkedHashMap<String, List<Integer>> clasifMascota = new LinkedHashMap<>();
         int contComparacion = 0;
 
         for (Mascota i : arrayMascota1) {
