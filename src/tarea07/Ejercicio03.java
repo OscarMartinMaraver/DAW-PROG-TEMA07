@@ -35,6 +35,7 @@ public class Ejercicio03 {
         LinkedHashMap<LocalDate, Mascota> mascotaMes = new LinkedHashMap<>();
         Mascota m;
         int contadorMes = 0;
+        
         do {
             m = Utilidades.mascotaAleatoria();
             if (mascotaMes.containsValue(m)) {

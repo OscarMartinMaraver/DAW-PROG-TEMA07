@@ -45,15 +45,16 @@ public class Ejercicio04 {
         //                 Procesamiento
         //----------------------------------------------
         LinkedHashMap<String, List<Integer>> clasifMascota = new LinkedHashMap<>();
+        ArrayList<Integer> posicion;
         int contComparacion = 0;
 
         for (Mascota i : arrayMascota1) {
             if (i.getNombre().equals(arrayMascota2.get(contComparacion).getNombre())) {
                 if (!clasifMascota.containsKey(i.getNombre())) {
-                    ArrayList<Integer> posicion = new ArrayList<>();
+                    posicion = new ArrayList<>();
                     clasifMascota.put(i.getNombre(), posicion);
                 }
-                clasifMascota.get(i.getNombre()).add(arrayMascota1.indexOf(i) + 1);
+                clasifMascota.get(i.getNombre()).add(arrayMascota1.indexOf(i) + 1);// se suma +1 porque la primera posicion del array es 0.
             }
             contComparacion++;
         }
