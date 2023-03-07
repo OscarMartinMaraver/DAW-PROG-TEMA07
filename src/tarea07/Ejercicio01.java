@@ -38,10 +38,9 @@ public class Ejercicio01 {
         
         HashSet<Mascota> conjuntoUno=new HashSet<>();
         HashSet<Mascota> conjuntoDos=new HashSet<>();
-        
+        Mascota m,n;
         
         do {
-            Mascota m,n;
             m= Utilidades.mascotaAleatoria();
             n= Utilidades.mascotaAleatoria();
             if (!conjuntoUno.add(m)||!conjuntoDos.add(n)) {
