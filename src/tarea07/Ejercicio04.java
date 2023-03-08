@@ -18,6 +18,10 @@ public class Ejercicio04 {
         //----------------------------------------------
         // Constantes
         final int NUMERO_MASCOTAS = 20;
+        
+        // Auxiliares
+        int contadorMascota=0; //para recorrer bucle do-while
+        int contComparacion = 0;
 
         //----------------------------------------------
         //               Entrada de datos 
@@ -29,7 +33,6 @@ public class Ejercicio04 {
         // Rellenamos la lista con mascotas aleatorias hasta que haya NUMERO_MASCOTAS
         ArrayList<Mascota> arrayMascota1 = new ArrayList<>();
         ArrayList<Mascota> arrayMascota2 = new ArrayList<>();
-        int contadorMascota = 0;
         Mascota m;
         Mascota n;
 
@@ -46,8 +49,7 @@ public class Ejercicio04 {
         //----------------------------------------------
         LinkedHashMap<String, List<Integer>> clasifMascota = new LinkedHashMap<>();
         ArrayList<Integer> posicion;
-        int contComparacion = 0;
-
+        
         for (Mascota i : arrayMascota1) {
             if (i.getNombre().equals(arrayMascota2.get(contComparacion).getNombre())) {
                 if (!clasifMascota.containsKey(i.getNombre())) {

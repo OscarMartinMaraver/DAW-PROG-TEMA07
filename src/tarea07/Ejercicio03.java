@@ -18,6 +18,10 @@ public class Ejercicio03 {
         //----------------------------------------------
         // Constantes
         final int MESES = 12;
+        
+        // Auxiliares
+        
+        int contadorMes = 0; //para recorrer bucle do-while
 
         //----------------------------------------------
         //               Entrada de datos 
@@ -34,7 +38,6 @@ public class Ejercicio03 {
 
         LinkedHashMap<LocalDate, Mascota> mascotaMes = new LinkedHashMap<>();
         Mascota m;
-        int contadorMes = 0;
         
         do {
             m = Utilidades.mascotaAleatoria();

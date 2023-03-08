@@ -17,6 +17,10 @@ public class Ejercicio02 {
         //----------------------------------------------
         // Constantes
         final int NUMERO_MASCOTAS = 10;
+        
+        // Auxiliares
+        
+        int contadorMascota=0; //para recorrer bucle do-while
 
         //----------------------------------------------
         //               Entrada de datos 
@@ -27,7 +31,6 @@ public class Ejercicio02 {
 
         // Rellenamos la lista con mascotas aleatorias hasta que haya NUMERO_MASCOTAS
         ArrayList<Mascota> arrayMascota = new ArrayList<>();
-        int contadorMascota = 0;
         Mascota m;
         
         do {
@@ -43,7 +46,7 @@ public class Ejercicio02 {
         ArrayList<Mascota> arrayPerro = new ArrayList<>();
 
         for (Mascota i : arrayMascota) {
-            if ((i.getTipo()).startsWith("P")) {
+            if ((i.getTipo()).toUpperCase().startsWith("P")) {
                 arrayPerro.add(i);
             }
         }
@@ -52,7 +55,7 @@ public class Ejercicio02 {
         ArrayList<Mascota> arrayGato = new ArrayList<>();
 
         for (Mascota i : arrayMascota) {
-            if ((i.getTipo()).startsWith("G")) {
+            if ((i.getTipo()).toUpperCase().startsWith("G")) {
                 arrayGato.add(i);
             }
         }
@@ -61,7 +64,7 @@ public class Ejercicio02 {
         ArrayList<Mascota> arrayMacho = new ArrayList<>();
 
         for (Mascota i : arrayMascota) {
-            if ((i.getSexo()).startsWith("M")) {
+            if ((i.getSexo()).toUpperCase().startsWith("M")) {
                 arrayMacho.add(i);
             }
         }
@@ -70,7 +73,7 @@ public class Ejercicio02 {
         ArrayList<Mascota> arrayHembra = new ArrayList<>();
 
         for (Mascota i : arrayMascota) {
-            if ((i.getSexo()).startsWith("H")) {
+            if ((i.getSexo()).toUpperCase().startsWith("H")) {
                 arrayHembra.add(i);
             }
         }
@@ -85,7 +88,7 @@ public class Ejercicio02 {
         for (Mascota i : arrayMascota) {
             arrayMascotaFin.add(i);
             posicion++;
-            if ((i.getTipo()).startsWith("P")) {
+            if ((i.getTipo()).toUpperCase().startsWith("P")) {
                 arrayNomElim.add(i.getNombre());
                 conjuntoNomElim.add(i.getNombre());
                 arrayPosElim.add(posicion);
